@@ -1,0 +1,80 @@
+[
+  {
+    "label": "FC 70, PAS 120: 0,58 (sem choque)",
+    "input": {
+      "fc": 70,
+      "pas": 120
+    },
+    "expected": {
+      "raw": {
+        "si": 0.583
+      },
+      "level": "low",
+      "main": "0,58"
+    },
+    "originalInput": {
+      "fc": 70,
+      "pas": 120
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+    "input": {
+      "fc": 110,
+      "pas": 120,
+      "pad": 80
+    },
+    "expected": {
+      "raw": {
+        "si": 0.917,
+        "msi": 1.179
+      },
+      "level": "mid"
+    },
+    "originalInput": {
+      "fc": 110,
+      "pas": 120,
+      "pad": 80
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "FC 100, PAS 100: 1,0 (moderado, limite)",
+    "input": {
+      "fc": 100,
+      "pas": 100
+    },
+    "expected": {
+      "raw": {
+        "si": 1
+      },
+      "level": "high",
+      "verdict": "moderado"
+    },
+    "originalInput": {
+      "fc": 100,
+      "pas": 100
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "FC 130, PAS 90: 1,44 (grave)",
+    "input": {
+      "fc": 130,
+      "pas": 90
+    },
+    "expected": {
+      "raw": {
+        "si": 1.444
+      },
+      "level": "high",
+      "verdict": "grave"
+    },
+    "originalInput": {
+      "fc": 130,
+      "pas": 90
+    },
+    "expandedZeroOptions": []
+  }
+]

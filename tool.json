@@ -1,0 +1,200 @@
+{
+  "tool": {
+    "id": "indice-de-choque",
+    "title": "Índice de choque (e modificado)",
+    "short": "FC/PAS e FC/PAM no trauma e no choque",
+    "desc": "Calcule o índice de choque (FC ÷ PAS) e o índice de choque modificado (FC ÷ PAM), com a classificação do choque hemorrágico no trauma.",
+    "lead": "Relação simples entre frequência cardíaca e pressão arterial que detecta hipoperfusão oculta e estima a gravidade do choque, sobretudo no trauma e na hemorragia.",
+    "spec": [
+      "medicina-de-emergencia",
+      "medicina-intensiva",
+      "cirurgia-geral",
+      "ginecologia-e-obstetricia"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "fc",
+        "Frequência cardíaca",
+        "num",
+        {
+          "min": 20,
+          "max": 250,
+          "unit": "bpm",
+          "ph": "100"
+        }
+      ],
+      [
+        "pas",
+        "Pressão sistólica",
+        "num",
+        {
+          "min": 30,
+          "max": 300,
+          "unit": "mmHg",
+          "ph": "110"
+        }
+      ],
+      [
+        "pad",
+        "Pressão diastólica (para o índice modificado)",
+        "num",
+        {
+          "min": 10,
+          "max": 200,
+          "unit": "mmHg",
+          "ph": "70",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Índice de choque</strong> = FC ÷ PAS (normal: 0,5 a 0,7).</p><p><strong>Índice de choque modificado</strong> = FC ÷ PAM, com PAM = PAD + (PAS − PAD) ÷ 3 (normal: 0,7 a 1,3).</p>",
+    "table": [
+      [
+        "Índice de choque",
+        "Classe (Mutschler, 2013)",
+        "Necessidade de transfusão"
+      ],
+      [
+        "&lt; 0,6",
+        "Sem choque",
+        "Baixa"
+      ],
+      [
+        "0,6 a &lt; 1,0",
+        "Choque leve",
+        "Aumenta progressivamente"
+      ],
+      [
+        "1,0 a &lt; 1,4",
+        "Choque moderado",
+        "Frequente"
+      ],
+      [
+        "≥ 1,4",
+        "Choque grave",
+        "Muito frequente; transfusão maciça provável"
+      ]
+    ],
+    "tips": [
+      "Índice ≥ 1,0 com PAS ainda \"normal\" identifica hipoperfusão oculta: não espere a hipotensão para agir.",
+      "Betabloqueadores, marcapasso, idade avançada e atletas treinados atenuam a taquicardia e fazem o índice subestimar o choque.",
+      "Na hemorragia pós-parto, a gestação muda a fisiologia: índice ≥ 0,9 a 1,0 já é sinal de alerta nos protocolos obstétricos.",
+      "O índice de choque modificado acima de 1,3 associou-se a maior mortalidade em pacientes do pronto-socorro (Liu, 2012)."
+    ],
+    "sources": [
+      [
+        "Allgöwer M, Burri C. „Schockindex\". Dtsch Med Wochenschr, 1967.",
+        "https://doi.org/10.1055/s-0028-1106070"
+      ],
+      [
+        "Mutschler M et al. The Shock Index revisited – a fast guide to transfusion requirement? A retrospective analysis on 21,853 patients derived from the TraumaRegister DGU. Crit Care, 2013.",
+        "https://doi.org/10.1186/cc12851"
+      ],
+      [
+        "Liu YC et al. Modified shock index and mortality rate of emergency patients. World J Emerg Med, 2012.",
+        "https://doi.org/10.5847/wjem.j.issn.1920-8642.2012.02.006"
+      ]
+    ],
+    "cases": [
+      [
+        "FC 70, PAS 120: 0,58 (sem choque)",
+        {
+          "fc": 70,
+          "pas": 120
+        },
+        {
+          "raw": {
+            "si": 0.583
+          },
+          "level": "low",
+          "main": "0,58"
+        }
+      ],
+      [
+        "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        {
+          "fc": 110,
+          "pas": 120,
+          "pad": 80
+        },
+        {
+          "raw": {
+            "si": 0.917,
+            "msi": 1.179
+          },
+          "level": "mid"
+        }
+      ],
+      [
+        "FC 100, PAS 100: 1,0 (moderado, limite)",
+        {
+          "fc": 100,
+          "pas": 100
+        },
+        {
+          "raw": {
+            "si": 1
+          },
+          "level": "high",
+          "verdict": "moderado"
+        }
+      ],
+      [
+        "FC 130, PAS 90: 1,44 (grave)",
+        {
+          "fc": 130,
+          "pas": 90
+        },
+        {
+          "raw": {
+            "si": 1.444
+          },
+          "level": "high",
+          "verdict": "grave"
+        }
+      ]
+    ],
+    "batch": "urgencia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "urgencia",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/urgencia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "id": "indice-de-choque",
+    "status": "needs-review",
+    "reason": "O quociente numérico pode permanecer como dado, mas o ZIP afirma 'Sem choque' por índice <0,6. Retirar essa conclusão: o exame e a avaliação de perfusão não são substituídos por uma divisão. A fonte de contexto descreve avaliação clínica do choque séptico.",
+    "sourceUrl": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
+    "sourceTitle": "SSC — International Guidelines 2026",
+    "sourceDate": "2026",
+    "publisherRegion": "Internacional / SCCM–ESICM",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed",
+    "reviewScope": "triagem por risco e finalidade da saída principal; sem validação clínica",
+    "suppressLegacyFormula": true,
+    "formulaOverride": "Índice de choque = frequência cardíaca / pressão arterial sistólica. Não confirma nem exclui choque isoladamente."
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/urgencia.php",
+    "sha256": "b24f3a77383430c3f3463168e78e88341034b3108bd712f3613ae32672dc281c",
+    "bytes": 121059
+  },
+  "clinicalValidation": "not-performed"
+}
