@@ -155,13 +155,9 @@
         }
       ]
     ],
-    "batch": "urgencia",
     "kind": "Calculadora",
     "config": null,
-    "areaId": "urgencia",
     "clinicalReview": "pending",
-    "sourceReview": "pending",
-    "sourceFile": "app/content/ferramentas/urgencia.php",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -190,11 +186,6 @@
     "reviewScope": "triagem por risco e finalidade da saída principal; sem validação clínica",
     "suppressLegacyFormula": true,
     "formulaOverride": "Índice de choque = frequência cardíaca / pressão arterial sistólica. Não confirma nem exclui choque isoladamente."
-  },
-  "sourceFile": {
-    "path": "app/content/ferramentas/urgencia.php",
-    "sha256": "b24f3a77383430c3f3463168e78e88341034b3108bd712f3613ae32672dc281c",
-    "bytes": 121059
   },
   "clinicalValidation": "not-performed"
 }
