@@ -1,0 +1,836 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "indice-de-choque",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/indice-de-choque/calculator.js",
+    "sha256": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6",
+    "bytes": 5046
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 4,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "indice-de-choque",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "FC 70, PAS 120: 0,58 (sem choque)",
+      "originalInput": {
+        "fc": 70,
+        "pas": 120
+      },
+      "input": {
+        "fc": 70,
+        "pas": 120
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "si": 0.583
+        },
+        "level": "low",
+        "main": "0,58"
+      },
+      "recordedResult": {
+        "main": [
+          "0,58",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 0.5833333333333334
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "fc": 70,
+            "pas": 120
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+          "startedAt": "2026-10-05T17:38:45.461Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "indice-de-choque",
+              "main": [
+                "0,58",
+                ""
+              ],
+              "label": "Índice de choque (FC/PAS)",
+              "raw": {
+                "si": 0.5833333333333334
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "c30a3fd393b68094ce08b20d863a250ab8ba364b663212435dc3671677854e6b",
+          "bytes": 161,
+          "elapsedMs": 6.7924999999813735
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "startedAt": "2026-10-05T17:38:45.461Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "indice-de-choque",
+            "main": [
+              "0,58",
+              ""
+            ],
+            "label": "Índice de choque (FC/PAS)",
+            "raw": {
+              "si": 0.5833333333333334
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "c30a3fd393b68094ce08b20d863a250ab8ba364b663212435dc3671677854e6b",
+        "bytes": 161,
+        "elapsedMs": 6.7924999999813735
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0,58",
+            "obtained": "0,58",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.si",
+            "expected": 0.583,
+            "obtained": 0.5833333333333334,
+            "tolerance": 0.0005000100000000001,
+            "difference": 0.00033333333333340764,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.si",
+            "expected": 0.5833333333333334,
+            "obtained": 0.5833333333333334,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,58",
+            "obtained": "0,58",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "indice-de-choque",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+      "originalInput": {
+        "fc": 110,
+        "pas": 120,
+        "pad": 80
+      },
+      "input": {
+        "fc": 110,
+        "pas": 120,
+        "pad": 80
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "si": 0.917,
+          "msi": 1.179
+        },
+        "level": "mid"
+      },
+      "recordedResult": {
+        "main": [
+          "0,92",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 0.9166666666666666,
+          "msi": 1.1785714285714286
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "fc": 110,
+            "pas": 120,
+            "pad": 80
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+          "startedAt": "2026-10-05T17:38:45.775Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "indice-de-choque",
+              "main": [
+                "0,92",
+                ""
+              ],
+              "label": "Índice de choque (FC/PAS)",
+              "raw": {
+                "si": 0.9166666666666666,
+                "msi": 1.1785714285714286
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "443995179c255214293ad2711a4711f6736e09c79f7f1b6b33d189d14cad7419",
+          "bytes": 186,
+          "elapsedMs": 5.558099999994738
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "startedAt": "2026-10-05T17:38:45.775Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "indice-de-choque",
+            "main": [
+              "0,92",
+              ""
+            ],
+            "label": "Índice de choque (FC/PAS)",
+            "raw": {
+              "si": 0.9166666666666666,
+              "msi": 1.1785714285714286
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "443995179c255214293ad2711a4711f6736e09c79f7f1b6b33d189d14cad7419",
+        "bytes": 186,
+        "elapsedMs": 5.558099999994738
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.si",
+            "expected": 0.917,
+            "obtained": 0.9166666666666666,
+            "tolerance": 0.0005000100000000001,
+            "difference": 0.00033333333333340764,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.msi",
+            "expected": 1.179,
+            "obtained": 1.1785714285714286,
+            "tolerance": 0.0005000100000000001,
+            "difference": 0.0004285714285714448,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.si",
+            "expected": 0.9166666666666666,
+            "obtained": 0.9166666666666666,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.msi",
+            "expected": 1.1785714285714286,
+            "obtained": 1.1785714285714286,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,92",
+            "obtained": "0,92",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "indice-de-choque",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+      "originalInput": {
+        "fc": 100,
+        "pas": 100
+      },
+      "input": {
+        "fc": 100,
+        "pas": 100
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "si": 1
+        },
+        "level": "high",
+        "verdict": "moderado"
+      },
+      "recordedResult": {
+        "main": [
+          "1,00",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 1
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "fc": 100,
+            "pas": 100
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+          "startedAt": "2026-10-05T17:38:46.087Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "indice-de-choque",
+              "main": [
+                "1,00",
+                ""
+              ],
+              "label": "Índice de choque (FC/PAS)",
+              "raw": {
+                "si": 1
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "465f618172802aa2d19d7ebac0f1c1eafdb3d8bc3ab7bf972e3dd8d43e80c544",
+          "bytes": 144,
+          "elapsedMs": 2.9777999999932945
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "startedAt": "2026-10-05T17:38:46.087Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "indice-de-choque",
+            "main": [
+              "1,00",
+              ""
+            ],
+            "label": "Índice de choque (FC/PAS)",
+            "raw": {
+              "si": 1
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "465f618172802aa2d19d7ebac0f1c1eafdb3d8bc3ab7bf972e3dd8d43e80c544",
+        "bytes": 144,
+        "elapsedMs": 2.9777999999932945
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.si",
+            "expected": 1,
+            "obtained": 1,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.si",
+            "expected": 1,
+            "obtained": 1,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,00",
+            "obtained": "1,00",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          },
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "indice-de-choque",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "FC 130, PAS 90: 1,44 (grave)",
+      "originalInput": {
+        "fc": 130,
+        "pas": 90
+      },
+      "input": {
+        "fc": 130,
+        "pas": 90
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "si": 1.444
+        },
+        "level": "high",
+        "verdict": "grave"
+      },
+      "recordedResult": {
+        "main": [
+          "1,44",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 1.4444444444444444
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "fc": 130,
+            "pas": 90
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+          "startedAt": "2026-10-05T17:38:46.386Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "indice-de-choque",
+              "main": [
+                "1,44",
+                ""
+              ],
+              "label": "Índice de choque (FC/PAS)",
+              "raw": {
+                "si": 1.4444444444444444
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "abae4334adca7cccbba2978967de75f7dbf5b0c15e3e20b58d0825efa9faadbe",
+          "bytes": 161,
+          "elapsedMs": 3.1494999999995343
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/indice-de-choque/calculate",
+        "startedAt": "2026-10-05T17:38:46.386Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "indice-de-choque",
+            "main": [
+              "1,44",
+              ""
+            ],
+            "label": "Índice de choque (FC/PAS)",
+            "raw": {
+              "si": 1.4444444444444444
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "abae4334adca7cccbba2978967de75f7dbf5b0c15e3e20b58d0825efa9faadbe",
+        "bytes": 161,
+        "elapsedMs": 3.1494999999995343
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.si",
+            "expected": 1.444,
+            "obtained": 1.4444444444444444,
+            "tolerance": 0.0005000100000000001,
+            "difference": 0.0004444444444444695,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.si",
+            "expected": 1.4444444444444444,
+            "obtained": 1.4444444444444444,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,44",
+            "obtained": "1,44",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          },
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
