@@ -1,6 +1,13 @@
 [
   {
-    "label": "FC 70, PAS 120: 0,58 (sem choque)",
+    "id": "indice-de-choque",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "FC 70, PAS 120: 0,58 (sem choque)",
+    "originalInput": {
+      "fc": 70,
+      "pas": 120
+    },
     "input": {
       "fc": 70,
       "pas": 120
@@ -12,14 +19,35 @@
       "level": "low",
       "main": "0,58"
     },
-    "originalInput": {
-      "fc": 70,
-      "pas": 120
+    "recordedResult": {
+      "main": [
+        "0,58",
+        ""
+      ],
+      "label": "Índice de choque (FC/PAS)",
+      "raw": {
+        "si": 0.5833333333333334
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+    "id": "indice-de-choque",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+    "originalInput": {
+      "fc": 110,
+      "pas": 120,
+      "pad": 80
+    },
     "input": {
       "fc": 110,
       "pas": 120,
@@ -32,15 +60,35 @@
       },
       "level": "mid"
     },
-    "originalInput": {
-      "fc": 110,
-      "pas": 120,
-      "pad": 80
+    "recordedResult": {
+      "main": [
+        "0,92",
+        ""
+      ],
+      "label": "Índice de choque (FC/PAS)",
+      "raw": {
+        "si": 0.9166666666666666,
+        "msi": 1.1785714285714286
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "FC 100, PAS 100: 1,0 (moderado, limite)",
+    "id": "indice-de-choque",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+    "originalInput": {
+      "fc": 100,
+      "pas": 100
+    },
     "input": {
       "fc": 100,
       "pas": 100
@@ -52,14 +100,34 @@
       "level": "high",
       "verdict": "moderado"
     },
-    "originalInput": {
-      "fc": 100,
-      "pas": 100
+    "recordedResult": {
+      "main": [
+        "1,00",
+        ""
+      ],
+      "label": "Índice de choque (FC/PAS)",
+      "raw": {
+        "si": 1
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "FC 130, PAS 90: 1,44 (grave)",
+    "id": "indice-de-choque",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "FC 130, PAS 90: 1,44 (grave)",
+    "originalInput": {
+      "fc": 130,
+      "pas": 90
+    },
     "input": {
       "fc": 130,
       "pas": 90
@@ -71,10 +139,23 @@
       "level": "high",
       "verdict": "grave"
     },
-    "originalInput": {
-      "fc": 130,
-      "pas": 90
+    "recordedResult": {
+      "main": [
+        "1,44",
+        ""
+      ],
+      "label": "Índice de choque (FC/PAS)",
+      "raw": {
+        "si": 1.4444444444444444
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

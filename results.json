@@ -1,0 +1,373 @@
+{
+  "id": "indice-de-choque",
+  "at": "2026-10-05T17:29:49.275Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/indice-de-choque/calculator.js",
+    "bytes": 5046,
+    "sha256": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6"
+  },
+  "cases": [
+    {
+      "name": "FC 70, PAS 120: 0,58 (sem choque)",
+      "input": {
+        "fc": 70,
+        "pas": 120
+      },
+      "obtained": {
+        "id": "indice-de-choque",
+        "main": [
+          "0,58",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 0.5833333333333334
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0,58",
+          "obtained": "0,58",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.si",
+          "expected": 0.583,
+          "obtained": 0.5833333333333334,
+          "tolerance": 0.0005000100000000001,
+          "difference": 0.00033333333333340764,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.si",
+          "expected": 0.5833333333333334,
+          "obtained": 0.5833333333333334,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,58",
+          "obtained": "0,58",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+      "input": {
+        "fc": 110,
+        "pas": 120,
+        "pad": 80
+      },
+      "obtained": {
+        "id": "indice-de-choque",
+        "main": [
+          "0,92",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 0.9166666666666666,
+          "msi": 1.1785714285714286
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.si",
+          "expected": 0.917,
+          "obtained": 0.9166666666666666,
+          "tolerance": 0.0005000100000000001,
+          "difference": 0.00033333333333340764,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.msi",
+          "expected": 1.179,
+          "obtained": 1.1785714285714286,
+          "tolerance": 0.0005000100000000001,
+          "difference": 0.0004285714285714448,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.si",
+          "expected": 0.9166666666666666,
+          "obtained": 0.9166666666666666,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.msi",
+          "expected": 1.1785714285714286,
+          "obtained": 1.1785714285714286,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,92",
+          "obtained": "0,92",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+      "input": {
+        "fc": 100,
+        "pas": 100
+      },
+      "obtained": {
+        "id": "indice-de-choque",
+        "main": [
+          "1,00",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.si",
+          "expected": 1,
+          "obtained": 1,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.si",
+          "expected": 1,
+          "obtained": 1,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,00",
+          "obtained": "1,00",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "FC 130, PAS 90: 1,44 (grave)",
+      "input": {
+        "fc": 130,
+        "pas": 90
+      },
+      "obtained": {
+        "id": "indice-de-choque",
+        "main": [
+          "1,44",
+          ""
+        ],
+        "label": "Índice de choque (FC/PAS)",
+        "raw": {
+          "si": 1.4444444444444444
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.si",
+          "expected": 1.444,
+          "obtained": 1.4444444444444444,
+          "tolerance": 0.0005000100000000001,
+          "difference": 0.0004444444444444695,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.si",
+          "expected": 1.4444444444444444,
+          "obtained": 1.4444444444444444,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,44",
+          "obtained": "1,44",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 32,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

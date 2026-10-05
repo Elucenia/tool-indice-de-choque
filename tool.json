@@ -5,13 +5,13 @@
     "short": "FC/PAS e FC/PAM no trauma e no choque",
     "desc": "Calcule o índice de choque (FC ÷ PAS) e o índice de choque modificado (FC ÷ PAM), com a classificação do choque hemorrágico no trauma.",
     "lead": "Relação simples entre frequência cardíaca e pressão arterial que detecta hipoperfusão oculta e estima a gravidade do choque, sobretudo no trauma e na hemorragia.",
+    "kind": "Calculadora",
     "spec": [
       "medicina-de-emergencia",
       "medicina-intensiva",
       "cirurgia-geral",
       "ginecologia-e-obstetricia"
     ],
-    "tier": 1,
     "fields": [
       [
         "fc",
@@ -49,39 +49,6 @@
       ]
     ],
     "formula": "<p><strong>Índice de choque</strong> = FC ÷ PAS (normal: 0,5 a 0,7).</p><p><strong>Índice de choque modificado</strong> = FC ÷ PAM, com PAM = PAD + (PAS − PAD) ÷ 3 (normal: 0,7 a 1,3).</p>",
-    "table": [
-      [
-        "Índice de choque",
-        "Classe (Mutschler, 2013)",
-        "Necessidade de transfusão"
-      ],
-      [
-        "&lt; 0,6",
-        "Sem choque",
-        "Baixa"
-      ],
-      [
-        "0,6 a &lt; 1,0",
-        "Choque leve",
-        "Aumenta progressivamente"
-      ],
-      [
-        "1,0 a &lt; 1,4",
-        "Choque moderado",
-        "Frequente"
-      ],
-      [
-        "≥ 1,4",
-        "Choque grave",
-        "Muito frequente; transfusão maciça provável"
-      ]
-    ],
-    "tips": [
-      "Índice ≥ 1,0 com PAS ainda \"normal\" identifica hipoperfusão oculta: não espere a hipotensão para agir.",
-      "Betabloqueadores, marcapasso, idade avançada e atletas treinados atenuam a taquicardia e fazem o índice subestimar o choque.",
-      "Na hemorragia pós-parto, a gestação muda a fisiologia: índice ≥ 0,9 a 1,0 já é sinal de alerta nos protocolos obstétricos.",
-      "O índice de choque modificado acima de 1,3 associou-se a maior mortalidade em pacientes do pronto-socorro (Liu, 2012)."
-    ],
     "sources": [
       [
         "Allgöwer M, Burri C. „Schockindex\". Dtsch Med Wochenschr, 1967.",
@@ -94,6 +61,10 @@
       [
         "Liu YC et al. Modified shock index and mortality rate of emergency patients. World J Emerg Med, 2012.",
         "https://doi.org/10.5847/wjem.j.issn.1920-8642.2012.02.006"
+      ],
+      [
+        "Liu2012",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4129788/"
       ]
     ],
     "cases": [
@@ -155,9 +126,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -166,26 +134,201 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T12:26:57.342Z",
+      "total": 30,
+      "passed": 30,
+      "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+      "evidenceSha256": "b417ec793165e6ccdab47424b1ca011e559fad6cd1a923f35b0bf2db5aafab03",
+      "scope": "Heart-rate/systolic-pressure quotient only. Modified shock index, diagnostic severity labels, population and mortality prediction remain outside this oracle.",
+      "source": {
+        "edition": "Liu et al. World Journal of Emergency Medicine2012;3(2):114–117",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4129788/",
+        "locator": "Introduction, shock index definition",
+        "access": "Primary Introduction and Methods sections read directly on 2026-10-04.",
+        "scope": "Heart-rate/systolic-pressure quotient only. Modified shock index, diagnostic severity labels, population and mortality prediction remain outside this oracle."
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Shock Index/Allgower 1967 FC/PAS e Modified Shock Index/Liu 2012 FC/PAM",
+    "implementationVersion": "indice-de-choque@native-2026-10-03+893dc244a3be",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/5299769/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Índice de choque = FC ÷ PAS (normal: 0,5 a 0,7). Índice de choque modificado = FC ÷ PAM, com PAM = PAD + (PAS − PAD) ÷ 3 (normal: 0,7 a 1,3).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "fc",
+            "label": "Frequência cardíaca",
+            "type": "num",
+            "min": 20,
+            "max": 250,
+            "unit": "bpm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pas",
+            "label": "Pressão sistólica",
+            "type": "num",
+            "min": 30,
+            "max": 300,
+            "unit": "mmHg",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pad",
+            "label": "Pressão diastólica (para o índice modificado)",
+            "type": "num",
+            "min": 10,
+            "max": 200,
+            "unit": "mmHg",
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "0fdb5ac2edcb7677a1720e0adb64c6bf6bc2ddc19ed3d1ad633a0ce54708163d"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Allgöwer M, Burri C. „Schockindex\". Dtsch Med Wochenschr, 1967.",
+          "url": "https://doi.org/10.1055/s-0028-1106070",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "[\"Shock index\"].",
+            "year": "1967",
+            "firstPublicationDate": "1967-10-01",
+            "doi": "10.1055/s-0028-1106070",
+            "pmid": "5299769",
+            "journal": "Deutsche medizinische Wochenschrift (1946)",
+            "authors": "Allgöwer M, Burri C."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/5299769/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Mutschler M et al. The Shock Index revisited – a fast guide to transfusion requirement? A retrospective analysis on 21,853 patients derived from the TraumaRegister DGU. Crit Care, 2013.",
+          "url": "https://doi.org/10.1186/cc12851",
+          "class": "primary-publication-full-text-retrieved",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The Shock Index revisited - a fast guide to transfusion requirement? A retrospective analysis on 21,853 patients derived from the TraumaRegister DGU.",
+            "year": "2013",
+            "firstPublicationDate": "2013-08-12",
+            "doi": "10.1186/cc12851",
+            "pmid": "23938104",
+            "pmcid": "PMC4057268",
+            "journal": "Critical care (London, England)",
+            "authors": "Mutschler M, Nienaber U, Münzberg M, Wölfl C, Schoechl H, Paffrath T, Bouillon B, Maegele M, TraumaRegister DGU."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4057268/",
+          "abstractAvailable": true,
+          "fullTextSha256": "54e9df8f9f14c92eed954d447aade69cf930a147e14595333780b367fb490f37",
+          "abstractSha256": "27c47174d5ee7d177ce444e5a51e8aef21331fbf0238843950878b1d0955e732",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Liu YC et al. Modified shock index and mortality rate of emergency patients. World J Emerg Med, 2012.",
+          "url": "https://doi.org/10.5847/wjem.j.issn.1920-8642.2012.02.006",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Modified shock index and mortality rate of emergency patients.",
+            "year": "2012",
+            "firstPublicationDate": "2012-01-01",
+            "doi": "10.5847/wjem.j.issn.1920-8642.2012.02.006",
+            "pmid": "25215048",
+            "pmcid": "PMC4129788",
+            "journal": "World journal of emergency medicine",
+            "authors": "Liu YC, Liu JH, Fang ZA, Shan GL, Xu J, Qi ZW, Zhu HD, Wang Z, Yu XZ."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4129788/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "a18890e8a8ba3ab0a175badc3fb305789a37c0d5a243d0950ccfc9a1746462ee",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T12:26:57.342Z",
+        "total": 30,
+        "passed": 30,
+        "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+        "scope": "Heart-rate/systolic-pressure quotient only. Modified shock index, diagnostic severity labels, population and mortality prediction remain outside this oracle.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "ee15bda9a4af2edae2afd85d5599e1448d7c4e6516b48ab3b14f76d4e5fd11b1"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6"
+    },
+    "limits": "O índice de choque usa frequência cardíaca dividida pela pressão sistólica; o modificado usa a pressão arterial média. São relações diferentes e não diagnosticam, sozinhas, choque ou necessidade de transfusão. Mutschler 2013 avaliou o índice na chegada à emergência em 21.853 adultos traumatizados; Liu 2012 estudou retrospectivamente 22.161 pacientes de 10 a 100 anos que receberam fluidos intravenosos e excluiu paradas cardiorrespiratórias ressuscitadas sem triagem. Essas coortes não demonstram limites universais para crianças de todas as idades, gestantes ou outras situações. Registre o momento e as condições das medidas; associações de mortalidade hospitalar de uma coorte não são previsão individual automática.",
+    "limitsEvidence": {
+      "status": "direct-original-methods-and-cohort-abstracts-read",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1186/cc12851",
+          "edition": "Mutschler2013",
+          "readScope": "Exact original abstract fully read:21853adulttraumapatients,EDarrival,retrospective2002–2011."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4129788/",
+          "edition": "Liu2012",
+          "readScope": "Original abstract and direct Methods population/exclusions/outcome sections read:22161patients aged10–100receivingIVfluids,2009;resuscitatedcardiorespiratoryarrestwithouttriageexcluded;in-hospitalmortality. Named sections only,not fullpaper."
+        },
+        {
+          "url": "https://doi.org/10.1055/s-0028-1106070",
+          "edition": "Allgöwer1967",
+          "readScope": "Identity only."
+        }
+      ],
+      "populationScope": "Adulttrauma versus emergency-fluid cohort aged10–100;SI and MSI are different quantities.",
+      "remainingChecks": [
+        "Original1967 paper not read.",
+        "Full methodological/table conformance beyond named Liu2012 sections not performed."
+      ],
+      "clinicalValidation": "not-performed",
+      "professionalLanguageReview": "not-performed",
+      "rightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed"
     }
   },
-  "review": {
-    "id": "indice-de-choque",
-    "status": "needs-review",
-    "reason": "O quociente numérico pode permanecer como dado, mas o ZIP afirma 'Sem choque' por índice <0,6. Retirar essa conclusão: o exame e a avaliação de perfusão não são substituídos por uma divisão. A fonte de contexto descreve avaliação clínica do choque séptico.",
-    "sourceUrl": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
-    "sourceTitle": "SSC — International Guidelines 2026",
-    "sourceDate": "2026",
-    "publisherRegion": "Internacional / SCCM–ESICM",
-    "checkedAt": "2026-09-25",
-    "clinicalValidation": "not-performed",
-    "reviewScope": "triagem por risco e finalidade da saída principal; sem validação clínica",
-    "suppressLegacyFormula": true,
-    "formulaOverride": "Índice de choque = frequência cardíaca / pressão arterial sistólica. Não confirma nem exclui choque isoladamente."
+  "currentSource": {
+    "file": "apps/website/private/tool-code/indice-de-choque/calculator.js",
+    "bytes": 5046,
+    "sha256": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "40cdab48e32fab2e600bf9b5c75be9265734faa9c6b92d89c24c940d5423490f",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 30,
+      "sha256": "6a44765147a1425a578ebfceaac123754cbff2ce7b16ee19c272c4866f7958df",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
