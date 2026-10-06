@@ -1,0 +1,674 @@
+{
+  "id": "indice-de-choque",
+  "implementationVersion": "indice-de-choque@native-2026-10-05+0bbddfd20cce",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sem choque (IC < 0,6)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Índice de choque modificado (FC/PAM)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "1,18 (0,7 a 1,3)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Choque leve (IC 0,6 a < 1,0)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Choque moderado (IC 1,0 a < 1,4)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Choque grave (IC ≥ 1,4)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No shock (SI < 0.6)",
+            "locale": "en",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Modified shock index (HR/MAP)",
+                "locale": "en",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1.18 (0.7 to 1.3)",
+                "locale": "en",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mild shock (SI 0.6 to < 1.0)",
+            "locale": "en",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Moderate shock (SI 1.0 to < 1.4)",
+            "locale": "en",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Severe shock (SI ≥ 1.4)",
+            "locale": "en",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sin choque (IC < 0,6)",
+            "locale": "es",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Índice de choque modificado (FC/PAM)",
+                "locale": "es",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1,18 (0,7 a 1,3)",
+                "locale": "es",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Choque leve (IC 0,6 a < 1,0)",
+            "locale": "es",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Choque moderado (IC 1,0 a < 1,4)",
+            "locale": "es",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Choque grave (IC ≥ 1,4)",
+            "locale": "es",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Pas de choc (IC < 0,6)",
+            "locale": "fr",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Indice de choc modifié (FC/PAM)",
+                "locale": "fr",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1,18 (0,7 à 1,3)",
+                "locale": "fr",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Choc léger (IC 0,6 à < 1,0)",
+            "locale": "fr",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Choc modéré (IC 1,0 à < 1,4)",
+            "locale": "fr",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Choc grave (IC ≥ 1,4)",
+            "locale": "fr",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Kein Schock (SI < 0,6)",
+            "locale": "de",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Modifizierter Schockindex (HF/MAD)",
+                "locale": "de",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1,18 (0,7 bis 1,3)",
+                "locale": "de",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Leichter Schock (SI 0,6 bis < 1,0)",
+            "locale": "de",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mäßiger Schock (SI 1,0 bis < 1,4)",
+            "locale": "de",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Schwerer Schock (SI ≥ 1,4)",
+            "locale": "de",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Nessuno shock (IC < 0,6)",
+            "locale": "it",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Indice di shock modificato (FC/PAM)",
+                "locale": "it",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1,18 (0,7 a 1,3)",
+                "locale": "it",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Shock lieve (IC 0,6 a < 1,0)",
+            "locale": "it",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Shock moderato (IC 1,0 a < 1,4)",
+            "locale": "it",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Shock grave (IC ≥ 1,4)",
+            "locale": "it",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "لا توجد صدمة (IC < 0,6)",
+            "locale": "ar",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "مؤشر الصدمة المعدل (FC/PAM)",
+                "locale": "ar",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "١٫١٨ (0,7 إلى 1,3)",
+                "locale": "ar",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "صدمة خفيفة (IC 0,6 إلى < 1,0)",
+            "locale": "ar",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "صدمة متوسطة (IC 1,0 إلى < 1,4)",
+            "locale": "ar",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "صدمة شديدة (IC ≥ 1,4)",
+            "locale": "ar",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "无休克（IC < 0.6）",
+            "locale": "zh",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "修正休克指数（FC/PAM）",
+                "locale": "zh",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1.18（0.7 至 1.3）",
+                "locale": "zh",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "轻度休克（IC 0.6 至 < 1.0）",
+            "locale": "zh",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中度休克（IC 1.0 至 < 1.4）",
+            "locale": "zh",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "重度休克（IC ≥ 1.4）",
+            "locale": "zh",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ショックなし（IC < 0.6）",
+            "locale": "ja",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "修正ショック指数（FC/PAM）",
+                "locale": "ja",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1.18（0.7 から 1.3）",
+                "locale": "ja",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "軽度ショック（IC 0.6 から < 1.0）",
+            "locale": "ja",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中等度ショック（IC 1.0 から < 1.4）",
+            "locale": "ja",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "重度ショック（IC ≥ 1.4）",
+            "locale": "ja",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "FC 70, PAS 120: 0,58 (sem choque)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "शॉक नहीं (IC < 0,6)",
+            "locale": "hi",
+            "template": "documented-authored-5814e4e3f245a8b331a9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "FC 110, PAS 120, PAD 80: 0,92; modificado 1,18",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "संशोधित शॉक सूचकांक (FC/PAM)",
+                "locale": "hi",
+                "template": "documented-authored-f73005c977f425959fb6"
+              },
+              "value": {
+                "text": "1.18 (0,7 से 1,3)",
+                "locale": "hi",
+                "template": "documented-authored-592936b5541b7c0398ae",
+                "sourceNumbers": [
+                  1.18
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "हल्का शॉक (IC 0,6 से < 1,0)",
+            "locale": "hi",
+            "template": "documented-authored-96ac18517c4d2ab21fc2"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "FC 100, PAS 100: 1,0 (moderado, limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "मध्यम शॉक (IC 1,0 से < 1,4)",
+            "locale": "hi",
+            "template": "documented-authored-2a5799c39ac3d3ff9584"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "FC 130, PAS 90: 1,44 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "गंभीर शॉक (IC ≥ 1,4)",
+            "locale": "hi",
+            "template": "documented-authored-53e621415c49b226c2a7"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

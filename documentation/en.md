@@ -77,3 +77,31 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+No shock (SI < 0.6)
+
+
+### 2
+
+Mild shock (SI 0.6 to < 1.0)
+
+| Result details | |
+| --- | --- |
+| Modified shock index (HR/MAP) | 1.18 (0.7 to 1.3) |
+
+
+### 3
+
+Moderate shock (SI 1.0 to < 1.4)
+
+
+### 4
+
+Severe shock (SI ≥ 1.4)
+

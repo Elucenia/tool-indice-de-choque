@@ -153,7 +153,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Shock Index/Allgower 1967 FC/PAS e Modified Shock Index/Liu 2012 FC/PAM",
-    "implementationVersion": "indice-de-choque@native-2026-10-03+893dc244a3be",
+    "implementationVersion": "indice-de-choque@native-2026-10-05+0bbddfd20cce",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/5299769/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -282,7 +282,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6"
+      "implementationHash": "0bbddfd20cce46febbc9f7ba5f3234a09253b1eccbe84f7b419e7e2d91b35168",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "indice-de-choque@native-2026-10-03+893dc244a3be",
+          "previousImplementationHash": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6",
+          "implementationHash": "0bbddfd20cce46febbc9f7ba5f3234a09253b1eccbe84f7b419e7e2d91b35168",
+          "scientificBodySha256": "b6122dbdc63445f4f3b83ccd5206a6bcb843ca6823352dfdbbad8bfcc4dce8b2",
+          "metadataContractHash": "0fdb5ac2edcb7677a1720e0adb64c6bf6bc2ddc19ed3d1ad633a0ce54708163d",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O índice de choque usa frequência cardíaca dividida pela pressão sistólica; o modificado usa a pressão arterial média. São relações diferentes e não diagnosticam, sozinhas, choque ou necessidade de transfusão. Mutschler 2013 avaliou o índice na chegada à emergência em 21.853 adultos traumatizados; Liu 2012 estudou retrospectivamente 22.161 pacientes de 10 a 100 anos que receberam fluidos intravenosos e excluiu paradas cardiorrespiratórias ressuscitadas sem triagem. Essas coortes não demonstram limites universais para crianças de todas as idades, gestantes ou outras situações. Registre o momento e as condições das medidas; associações de mortalidade hospitalar de uma coorte não são previsão individual automática.",
     "limitsEvidence": {
@@ -317,15 +345,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/indice-de-choque/calculator.js",
-    "bytes": 5046,
-    "sha256": "893dc244a3bec3613b10f6edda0b242b6df5992943e3463f7d5ff67174652cc6"
+    "bytes": 5251,
+    "sha256": "0bbddfd20cce46febbc9f7ba5f3234a09253b1eccbe84f7b419e7e2d91b35168"
   },
-  "sourceToolSha256": "40cdab48e32fab2e600bf9b5c75be9265734faa9c6b92d89c24c940d5423490f",
+  "sourceToolSha256": "d20196773a72fee33a08ba71e3978eaee7c94564d8deba18f80f388605717a80",
   "omittedFullReferenceBanks": [
     {
       "rows": 30,
       "sha256": "6a44765147a1425a578ebfceaac123754cbff2ce7b16ee19c272c4866f7958df",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

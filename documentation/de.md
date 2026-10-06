@@ -77,3 +77,31 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Kein Schock (SI < 0,6)
+
+
+### 2
+
+Leichter Schock (SI 0,6 bis < 1,0)
+
+| Ergebnisdetails | |
+| --- | --- |
+| Modifizierter Schockindex (HF/MAD) | 1,18 (0,7 bis 1,3) |
+
+
+### 3
+
+Mäßiger Schock (SI 1,0 bis < 1,4)
+
+
+### 4
+
+Schwerer Schock (SI ≥ 1,4)
+

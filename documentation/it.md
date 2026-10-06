@@ -77,3 +77,31 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Nessuno shock (IC < 0,6)
+
+
+### 2
+
+Shock lieve (IC 0,6 a < 1,0)
+
+| Dettagli del risultato | |
+| --- | --- |
+| Indice di shock modificato (FC/PAM) | 1,18 (0,7 a 1,3) |
+
+
+### 3
+
+Shock moderato (IC 1,0 a < 1,4)
+
+
+### 4
+
+Shock grave (IC ≥ 1,4)
+

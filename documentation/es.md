@@ -77,3 +77,31 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Sin choque (IC < 0,6)
+
+
+### 2
+
+Choque leve (IC 0,6 a < 1,0)
+
+| Detalles del resultado | |
+| --- | --- |
+| Índice de choque modificado (FC/PAM) | 1,18 (0,7 a 1,3) |
+
+
+### 3
+
+Choque moderado (IC 1,0 a < 1,4)
+
+
+### 4
+
+Choque grave (IC ≥ 1,4)
+
